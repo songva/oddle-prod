@@ -114,11 +114,11 @@ body {
     #search-page #user-list #scrollbar-overlay {
       position: absolute;
       height: 100%;
-      width: 19px;
+      width: 26px;
       display: block;
       background-color: white;
       top: 0px;
-      right: 0px; }
+      right: -4px; }
 
 #user-detail-page {
   display: flex;
@@ -199,11 +199,11 @@ body {
     #user-detail-page #repo-list #scrollbar-overlay {
       position: absolute;
       height: 100%;
-      width: 19px;
+      width: 26px;
       display: block;
       background-color: white;
       top: 0px;
-      right: 0px; }
+      right: -4px; }
 
 @media (max-width: 800px) {
   body {
@@ -242,6 +242,10 @@ body {
     width: 65%; } }
 
 @media (max-width: 420px) {
+  #search-page #search-bar {
+    width: 80%; }
+  #search-page #user-list {
+    width: calc(80% + 20px); }
   #user-detail-page > section h1 {
     font-size: 26px; }
   #user-detail-page #repo-list {
