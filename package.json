@@ -1,0 +1,24 @@
+{
+  "name": "oddle-prod",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/songva/oddle-prod.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/songva/oddle-prod/issues"
+  },
+  "homepage": "https://github.com/songva/oddle-prod#readme",
+  "dependencies": {
+    "express": "^4.16.1",
+    "path": "^0.12.7"
+  }
+}
