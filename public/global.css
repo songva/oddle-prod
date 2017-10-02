@@ -1,4 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,300);* {
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,300);@viewport {
+  zoom: 1.0;
+  width: device-width; }
+
+* {
   font-family: "Work Sans", "Microsoft YaHei", sans-serif;
   color: #56b6c2; }
 
@@ -15,7 +19,7 @@ body {
   width: 80%;
   margin: auto;
   background: white;
-  height: 100%;
+  height: 100vh;
   max-width: 1100px;
   min-width: 680px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px 5px; }
@@ -58,11 +62,12 @@ body {
       content: ' ';
       display: block;
       position: absolute;
-      background: linear-gradient(white 20px, rgba(255, 255, 255, 0.4) 35px, rgba(255, 255, 255, 0.3) 40px, transparent 40px, transparent calc(100% - 40px), rgba(255, 255, 255, 0.3) calc(100% - 40px), rgba(255, 255, 255, 0.4) calc(100% - 35px), white calc(100% - 20px));
-      height: calc(100vh - 40px);
+      background: linear-gradient(white 30px, rgba(255, 255, 255, 0.4) 45px, rgba(255, 255, 255, 0.3) 50px, transparent 50px, transparent calc(100% - 50px), rgba(255, 255, 255, 0.3) calc(100% - 50px), rgba(255, 255, 255, 0.4) calc(100% - 45px), white calc(100% - 30px));
+      height: calc(100vh - 20px);
       width: 100%;
       min-width: 280px;
-      pointer-events: none; }
+      pointer-events: none;
+      margin: -10px 0px; }
     #search-page #user-list ul {
       width: calc(100% - 20px);
       margin: 0px;
@@ -139,21 +144,21 @@ body {
       word-break: break-word; }
   #user-detail-page #repo-list {
     width: 70%;
-    height: calc(100vh - 4vw);
+    height: calc(100vh - 20px);
     position: relative; }
     #user-detail-page #repo-list ul::before {
       content: ' ';
       width: 100%;
       height: 100%;
       position: absolute;
-      background: linear-gradient(white 20px, rgba(255, 255, 255, 0.4) 35px, rgba(255, 255, 255, 0.3) 40px, transparent 40px, transparent calc(100% - 40px), rgba(255, 255, 255, 0.3) calc(100% - 40px), rgba(255, 255, 255, 0.4) calc(100% - 35px), white calc(100% - 20px));
+      background: linear-gradient(white 30px, rgba(255, 255, 255, 0.4) 45px, rgba(255, 255, 255, 0.3) 50px, transparent 50px, transparent calc(100% - 50px), rgba(255, 255, 255, 0.3) calc(100% - 50px), rgba(255, 255, 255, 0.4) calc(100% - 45px), white calc(100% - 30px));
       pointer-events: none; }
     #user-detail-page #repo-list ul {
       width: calc(100% - 20px);
       margin: 0px;
       padding: 0px 20px 0px 0px;
       list-style: none;
-      height: calc(100vh - 4vw);
+      height: calc(100vh - 20px);
       overflow-y: scroll;
       display: flex;
       flex-wrap: wrap;
@@ -206,3 +211,40 @@ body {
   #root {
     width: 100%;
     box-shadow: none; } }
+
+@media (max-width: 700px) {
+  #root {
+    min-width: auto; }
+  #search-page #search-bar {
+    width: 60%;
+    padding: 40px 0px 20px;
+    min-width: auto; }
+    #search-page #search-bar input {
+      width: calc(100% - 20px); }
+  #search-page #user-list {
+    width: calc(60% + 20px);
+    padding-left: 20px;
+    min-width: auto; }
+    #search-page #user-list ul::before {
+      height: calc(100vh - 120px);
+      min-width: auto; }
+    #search-page #user-list ul {
+      height: calc(100vh - 140px); } }
+
+@media (max-width: 640px) {
+  #user-detail-page > section {
+    min-width: auto;
+    width: calc(35% - 20px);
+    padding: 0 2% 0 20px; }
+    #user-detail-page > section h1 {
+      font-size: 28px; }
+  #user-detail-page #repo-list {
+    width: 65%; } }
+
+@media (max-width: 420px) {
+  #user-detail-page > section h1 {
+    font-size: 26px; }
+  #user-detail-page #repo-list {
+    width: 60%; }
+    #user-detail-page #repo-list ul li {
+      min-width: auto; } }

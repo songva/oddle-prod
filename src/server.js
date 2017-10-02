@@ -11,6 +11,7 @@ let app = express()
 
 const indexPath = path.join(__dirname, '/../index.html')
 app.get('/', function (_, res) { res.sendFile(indexPath) })
+app.get('/*', function (_, res) { res.sendFile(indexPath) })
 
 const publicPath = express.static(path.join(__dirname, '../public'))
 app.use('/public', publicPath)
