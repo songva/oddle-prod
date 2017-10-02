@@ -114,7 +114,7 @@ body {
     #search-page #user-list #scrollbar-overlay {
       position: absolute;
       height: 100%;
-      width: 26px;
+      width: 24px;
       display: block;
       background-color: white;
       top: 0px;
@@ -199,7 +199,7 @@ body {
     #user-detail-page #repo-list #scrollbar-overlay {
       position: absolute;
       height: 100%;
-      width: 26px;
+      width: 24px;
       display: block;
       background-color: white;
       top: 0px;
